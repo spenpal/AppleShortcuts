@@ -1,0 +1,6 @@
+{
+    "Version": "1.0.1",
+    "URL": "https://www.icloud.com/shortcuts/3072aa015d934e3187d54101e9314326",
+    "Notes": "→ Optimized auto-updater for faster shortcut runs.\n→ Switched to RoutineHub API for updates.\n→ Updated metadata dictionary with new RoutineHub username.\n→ Changed titles for various shortcut messages.",
+    "Release": "02/20/24"
+}
