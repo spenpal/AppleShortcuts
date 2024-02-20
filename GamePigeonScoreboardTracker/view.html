@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Scoreboard</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif;
+                background-color: #f3f2f1;
+                background-color: #d9efa1;
+            }
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                max-width: 1024px;
+                margin: 0 auto;
+                padding: 5%;
+            }
+
+            .logo {
+                flex-grow: 1;
+                display: block;
+                margin: 0 auto;
+                width: 30%;
+                max-width: 150px;
+            }
+
+            h1 {
+                flex-grow: 1;
+                text-align: center;
+                margin-bottom: 5%;
+                font-size: 2rem;
+                color: #000000;
+            }
+
+            #player1-name {
+                color: #338eea;
+                word-wrap: break-word;
+                max-width: 95%;
+            }
+
+            #player2-name {
+                color: #ff5d6f;
+                word-wrap: break-word;
+                max-width: 95%;
+            }
+
+            .scoreboard {
+                flex-grow: 1;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                background-color: #ffffff;
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                margin-bottom: 5%;
+                line-height: 1;
+            }
+
+            .p1-score {
+                font-weight: bold;
+                color: #338eea;
+                font-size: 3rem;
+                line-height: 1;
+            }
+
+            .score-dash {
+                font-size: 3rem;
+                color: #000000;
+            }
+
+            .p2-score {
+                font-weight: bold;
+                color: #ff5d6f;
+                font-size: 3rem;
+                line-height: 1;
+            }
+
+            .history {
+                background-color: #ffffff;
+                border-radius: 10px;
+                padding: 3%;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .history h2 {
+                margin-top: 1%;
+                margin-bottom: 3%;
+                margin-left: 0.1%;
+                color: #f6b40e;
+            }
+
+            .table-wrap {
+                max-height: 83vh;
+                overflow: auto;
+            }
+
+            .history table {
+                width: 100%;
+                border-collapse: collapse;
+                table-layout: fixed;
+            }
+
+            .history table thead th {
+                font-size: 1em;
+                background-color: #f6b40e;
+                color: #ffffff;
+                padding: 3%;
+                text-align: left;
+                position: sticky;
+                top: 0;
+            }
+
+            .arrow {
+                height: 0.75em;
+                width: auto;
+            }
+
+            .history table tbody tr:nth-child(even) {
+                background-color: #f3f2f1;
+            }
+
+            .history table tbody td {
+                padding: 3%;
+                word-wrap: break-word;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img
+                class="logo"
+                src="https://i.imgur.com/YUIwmFd.png"
+                alt="GamePigeon Logo"
+            />
+            <h1>
+                <span id="player1-name">Your Nickname</span> x
+                <span id="player2-name">Friend Nickname</span> <br />Scoreboard
+            </h1>
+            <div class="scoreboard">
+                <div class="p1-score">
+                    <p id="player1-score">Your Score</p>
+                </div>
+                <div class="score-dash">-</div>
+                <div class="p2-score">
+                    <p id="player2-score">Friend Score</p>
+                </div>
+            </div>
+            <div class="history">
+                <h2>History</h2>
+                <div class="table-wrap">
+                    <table id="csv-table">
+                        <thead>
+                            <tr>
+                                <th onclick="reverse(0)">
+                                    Date&nbsp;<img
+                                        class="arrow"
+                                        src="https://i.imgur.com/dfD47B4.png"
+                                        alt="sort-icon"
+                                    />
+                                </th>
+                                <th>Game</th>
+                                <th>Winner</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Dynamically generated rows will be added here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script>
+        function convertToUserTimeZone(row) {
+            // Creating a new Date object using the extracted date and time
+            let [dateStr, game, winner] = row;
+            const date = new Date(dateStr);
+
+            // Getting the user's current time zone
+            const userTimeZone =
+                Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+            // Converting the date to the user's time zone
+            const userTimeZoneDate = date.toLocaleString("en-US", {
+                timeZone: userTimeZone,
+                year: "2-digit",
+                month: "2-digit",
+                day: "2-digit",
+                hour: "numeric",
+                minute: "numeric",
+                hour12: true,
+                timeZoneName: "short",
+            });
+
+            // Updating the CSV row with the converted date
+            const updatedRow = [userTimeZoneDate, game, winner];
+            return updatedRow;
+        }
+
+        function reverse(columnIndex) {
+            const tbody = document.querySelector("#csv-table tbody");
+            const rows = Array.from(tbody.querySelectorAll("tr"));
+            const arrow = document.querySelector("#arrow");
+
+            // Reverse rows
+            rows.reverse();
+
+            // Clear the table body
+            tbody.innerHTML = "";
+
+            // Re-append the sorted rows to the table body
+            rows.forEach((row) => {
+                tbody.appendChild(row);
+            });
+        }
+    </script>
+    <script>
+        // Define CSV data here
+        const csvData = `CSV Data`;
+
+        // Parse the CSV data
+        let data = Papa.parse(csvData, {
+            skipEmptyLines: true,
+        }).data;
+
+        // Convert the Date column to user's time zone
+        data = data.map(convertToUserTimeZone);
+
+        // Sort all rows by Date
+        data.sort(function (a, b) {
+            const dateA = new Date(a[0]);
+            const dateB = new Date(b[0]);
+            return dateB - dateA;
+        });
+
+        // Add table tags to each row and cell
+        let table = "";
+        data.forEach(function (row) {
+            table += `<tr>`;
+
+            // Iterate over each column
+            row.forEach(function (column) {
+                table += "<td>" + column + "</td>";
+            });
+
+            table += "</tr>";
+        });
+
+        // Update the table body
+        const tbody = document.querySelector("#csv-table tbody");
+        tbody.innerHTML = table;
+    </script>
+</html>
