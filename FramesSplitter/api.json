@@ -1,0 +1,6 @@
+{
+    "Version": "2.0.0",
+    "URL": "https://www.icloud.com/shortcuts/2ced569210e54c32b9ae8c45f6a28494",
+    "Notes": "→ Renamed the shortcut to \"Frames Splitter\" to shorten it.\n→ Moved frames directory to a more appropriate location.\n→ Reduced verbosity of ffmpeg command.\n→ Added input option from Share Sheet.\n→ Added option to change the framerate of media before splitting.\n→ Optimized auto-updater for faster shortcut runs.\n→ Switched to RoutineHub API for updates.\n→ Updated metadata dictionary with new RoutineHub username.",
+    "Release": "02/20/24"
+}
