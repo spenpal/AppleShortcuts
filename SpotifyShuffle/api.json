@@ -1,0 +1,6 @@
+{
+    "Version": "2.0.0",
+    "URL": "https://www.icloud.com/shortcuts/95a5df24a53e45248c1ab344da9b36c9",
+    "Notes": "→ Added option to play your \"Liked Songs\" in the music settings.\n→ Optimized auto-updater for faster shortcut runs.\n→ Switched to RoutineHub API for updates.\n→ Updated metadata dictionary with new RoutineHub username.",
+    "Release": "02/20/24"
+}
