@@ -1,0 +1,6 @@
+{
+    "Version": "1.3.4",
+    "URL": "https://www.icloud.com/shortcuts/2b1f2957cd3a431fbce5600fe49aac02",
+    "Notes": "→ Renamed shortcut to \"Quickcord\" for better generalization.\n→ Optimized auto-updater for faster shortcut runs.\n→ Switched to RoutineHub API for updates.\n→ Updated metadata dictionary with new RoutineHub username.",
+    "Release": "02/20/24"
+}
