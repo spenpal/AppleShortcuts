@@ -3,8 +3,8 @@
 ## Table of Contents
 
 -   [How It Works](#how-it-works)
--   [Prerequisites](#prerequisites)
 -   [Demo](#demo)
+-   [Prerequisites](#prerequisites)
 -   [Feedback](#feedback)
 -   [Auto-Updater](#auto-updater)
 -   [Privacy](#privacy)
