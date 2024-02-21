@@ -18,8 +18,12 @@ You can change the framerate of your media to reduce the number of frames as out
 
 ## Prerequisites
 
+<a href="https://apps.apple.com/us/app/files/id1232058109">
+	<img src="https://i.imgur.com/gyNTIdc.png" alt="files-badge" width="14.21%"></a>
 <a href="https://apps.apple.com/us/app/a-shell-mini/id1543537943">
 	<img src="https://i.imgur.com/qd3Oq9b.png" alt="aShellmini-badge" width="22.63%"/></a>
+<a href="https://apps.apple.com/us/app/photos/id1584215428">
+	<img src="https://i.imgur.com/WlLrStW.png" alt="photos-badge" width="16.62%"/></a>
 
 ## Getting Started
 
