@@ -38,16 +38,16 @@
 6. All details appear in _Quick Look_ as an Apple Contact. If satisfied, tap the _Share Sheet_ icon and then the `Contacts` app.
 7. Tap **Done**, then **Save**.
 
-## Prerequisites
-
-<a href="https://apps.apple.com/us/app/safari/id1146562112">
-	<img src="https://i.imgur.com/XdOtb9i.png" alt="safari-badge" width="15%"/></a>
-
 ## Demo
 
 <p align="center">
 	<img src="https://i.imgur.com/qlUmXMQ.png" alt="demo" width="66.66%"/>
 </p>
+
+## Prerequisites
+
+<a href="https://apps.apple.com/us/app/safari/id1146562112">
+	<img src="https://i.imgur.com/XdOtb9i.png" alt="safari-badge" width="15%"/></a>
 
 ## Feedback
 
