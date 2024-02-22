@@ -11,7 +11,7 @@
 
 ## How It Works
 
-**Time Your Shortcut** calculates the total run time of any shortcut in seconds, with millisecond precision. You can also test specific sections of your shortcut (_refer to [Getting Started](https://chat.openai.com/c/2746ee1e-7fbe-4d92-939e-22309a8a830d#getting-started) for details_).
+**Time Your Shortcut** calculates the total run time of any shortcut in seconds, with millisecond precision. You can also test specific sections of your shortcut (_refer to [Getting Started](#getting-started) for details_).
 
 ### Notes
 
