@@ -50,5 +50,5 @@ This shortcut utilizes the [UpdateKit API](https://www.mikebeas.com/updatekit-ap
 
 ## Credits
 
--   Graphics created with [MediaKit](https://routinehub.co/shortcut/1911).
+-   Banner created with [MediaKit](https://routinehub.co/shortcut/1911).
 -   Screenshots framed with [Screenshot Framer](https://routinehub.co/shortcut/8067/).
