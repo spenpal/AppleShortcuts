@@ -72,7 +72,7 @@ Configure the following settings to your preferences.
     - Default: **False**
         - Videos are re-encoded to **H.264** and metadata is removed. Videos smaller than 4K will not be downscaled.
         - To guarantee videos are embeddable on Discord, leave this setting on default.
-            - _Except some video extensions are not embeddable on Discord: [Source #1](https://www.reddit.com/r/discordapp/comments/f2kt5r/guide_file_formats_discord_can_embed/) & [Source #2](https://www.reddit.com/r/discordapp/comments/rtbv2g/embedded_videos_formats_list/)_
+            - _Except not all video extensions are not embeddable on Discord: [Source #1](https://www.reddit.com/r/discordapp/comments/f2kt5r/guide_file_formats_discord_can_embed/) & [Source #2](https://www.reddit.com/r/discordapp/comments/rtbv2g/embedded_videos_formats_list/)_
 6. **Send Text As Code**: Send text as a code block, with syntax highlighting.
     - Default: **False**
 
