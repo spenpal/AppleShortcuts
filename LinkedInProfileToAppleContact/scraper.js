@@ -42,6 +42,8 @@ async function get_profile_picture_url() {
         ? bigger_profile_picture_element.getAttribute("src").trim()
         : null;
 
+    document.querySelector("[data-test-modal-close-btn]").click();
+
     return profile_picture_url;
 }
 
@@ -257,9 +259,9 @@ async function main() {
     return linkedin_info;
 }
 
-main().then((LINKEDIN_INFO) => {
+main().then((linkedin_info) => {
     // Close contact window
     document.querySelector("[data-test-modal-close-btn]").click();
-    console.log(LINKEDIN_INFO);
+    console.log(linkedin_info);
     // completion(LINKEDIN_INFO);
 });
