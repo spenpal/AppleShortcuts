@@ -263,5 +263,5 @@ main().then((linkedin_info) => {
     // Close contact window
     document.querySelector("[data-test-modal-close-btn]").click();
     console.log(linkedin_info);
-    // completion(LINKEDIN_INFO);
+    // completion(linkedin_info);
 });
