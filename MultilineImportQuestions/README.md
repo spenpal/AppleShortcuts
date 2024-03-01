@@ -14,9 +14,7 @@
 
 The Import Questions feature in Shortcuts is crucial for developers, allowing users to customize shortcuts interactively. However, it has a limitation – it doesn't support multi-line questions. This limitation makes detailed explanations look messy when pasted. My shortcut addresses this issue, making your import questions visually appealing.
 
-![Example Issue](https://i.imgur.com/El2TFnh.jpg)
-
-Since my [Reddit post](https://www.reddit.com/r/shortcuts/comments/zluvtf/adding_line_breaks_inside_shortcut_setup_questions/), users have faced this bug without a proper solution. My shortcut solves this problem, enhancing the import experience.
+![Example Demo](https://i.imgur.com/El2TFnh.jpg)
 
 ## How It Works
 
