@@ -1,8 +1,10 @@
 # Apple Shortcuts
 
-Welcome to my Apple Shortcuts repo! This repo represents a comprehensive list and details of all Apple Shortcuts I've built to date. Feel free to peruse — you might end up finding something useful!
+Welcome to my Apple Shortcuts repo! Feel free to peruse — you might end up finding something useful!
 
 To download my shortcuts, click on the banner on the **README** file within each shortcut folder. You can also find my shortcuts published on [RoutineHub](https://routinehub.co/user/spenpal), which is my official Shortcuts page.
+
+![RoutineHub Page](https://i.imgur.com/u4Wmsbm.png)
 
 Feel free to leave any feedback (_questions, bugs, features_) on my shortcuts! To do so, create a `New issue` in the [Issues](https://github.com/mrjeevs/Shortcuts/issues) tab.
 
