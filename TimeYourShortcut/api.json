@@ -1,6 +1,6 @@
 {
-    "Version": "2.0.0",
-    "URL": "https://www.icloud.com/shortcuts/f492a8b0214847d88b18050199c5c93f",
-    "Notes": "→ Standardized timings using seconds only and introduced millisecond accuracy.\n→ Implemented auto-updater code for seamless updates.\n→ Enabled shortcut input to test times of specific sections of a shortcut.\n→ Switched to RoutineHub API for updates.\n→ Updated metadata dictionary with new RoutineHub username.",
-    "Release": "02/20/24"
+    "Version": "2.1.0",
+    "URL": "https://www.icloud.com/shortcuts/c74e37fb071e498fb0f2864c6937c8a3",
+    "Notes": "→ Replaced JavaScript code with native actions to calculate time difference.",
+    "Release": "03/13/24"
 }
