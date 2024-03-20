@@ -15,6 +15,8 @@
 
 **Wallpaper Roulette** fetches a random wallpaper from [Unsplash](https://unsplash.com/), sizing it to your device's resolution for both the lock and home screens.
 
+The current wallpaper is saved in your `Files` app at: "_**iCloud Drive/Shortcuts/WallpaperRoulette/**_". If you're particularly fond of the current wallpaper, save it to your `Photos` app by navigating to the folder. With each new run of the shortcut, the previous wallpaper is deleted from the `Files` app, making room for the new one.
+
 If you have specific wallpaper preferences, input keywords for a guided search. Keep in mind, it's a wallpaper **finder**, not a _generator_ - embracing the spirit of randomness!
 
 ## Prerequisites
