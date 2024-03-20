@@ -40,8 +40,9 @@
     - 💡Tip: To auto-request desktop site every time you visit LinkedIn, tap **&#x1D00;A > Website Settings > Request Desktop Website**.
 4. Visit your connection's LinkedIn profile.
 5. Tap the _Share Sheet_ icon and tap **LinkedIn Profile To Apple Contact**.
-6. All details appear in _Quick Look_ as an Apple Contact. If satisfied, tap the _Share Sheet_ icon and then the `Contacts` app.
-7. Tap **Done**, then **Save**.
+6. Share your new contact with the `Contacts` app.
+    - Tap the _Share Sheet_ icon and then `Contacts`.
+8. Tap **Done**, then **Save**.
 
 ## Demo
 
