@@ -42,7 +42,7 @@
 5. Tap the _Share Sheet_ icon and tap **LinkedIn Profile To Apple Contact**.
 6. Share your new contact with the `Contacts` app.
     - Tap the _Share Sheet_ icon and then `Contacts`.
-8. Tap **Done**, then **Save**.
+7. Tap **Done**, then **Save**.
 
 ## Demo
 
