@@ -1,6 +1,6 @@
 {
-    "Version": "1.0.1",
-    "URL": "https://www.icloud.com/shortcuts/7d09464c2b8146b89fe8f0a7dd4240d8",
-    "Notes": "→ Optimized auto-updater for faster shortcut runs.\n→ Switched to RoutineHub API for updates.\n→ Updated metadata dictionary with new RoutineHub username.",
-    "Release": "02/20/24"
+    "Version": "1.1.0",
+    "URL": "https://www.icloud.com/shortcuts/9655ecdff0ee44fb95c29134faba563a",
+    "Notes": "→ Saves current wallpaper to the Files app (allows users to make a copy of the current wallpaper, if they like it).",
+    "Release": "03/20/24"
 }
