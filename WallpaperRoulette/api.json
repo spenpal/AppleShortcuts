@@ -1,6 +1,6 @@
 {
-    "Version": "1.1.0",
-    "URL": "https://www.icloud.com/shortcuts/9655ecdff0ee44fb95c29134faba563a",
-    "Notes": "→ Saves current wallpaper to the Files app (allows users to make a copy of the current wallpaper, if they like it).",
+    "Version": "1.1.1",
+    "URL": "https://www.icloud.com/shortcuts/b5e1fe9a51e44dc19edbe565b793271b",
+    "Notes": "→ Fixed missing import questions for setup.",
     "Release": "03/20/24"
 }
