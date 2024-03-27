@@ -2,7 +2,7 @@
 
 Welcome to my Apple Shortcuts repo! Feel free to peruse — you might end up finding something useful!
 
-To download my shortcuts, click on the banner on the **README** file within each shortcut folder. You can also find my shortcuts published on [RoutineHub](https://routinehub.co/user/spenpal), which is my official Shortcuts page.
+To learn more about each shortcut, read the **README** inside each folder. To download my shortcuts, visit [RoutineHub](https://routinehub.co/user/spenpal), which is my official Shortcuts page.
 
 ![RoutineHub Page](https://i.imgur.com/u4Wmsbm.png)
 
