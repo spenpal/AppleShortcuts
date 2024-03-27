@@ -1,4 +1,4 @@
-[![Shortcut Banner](https://i.imgur.com/yNuPpgU.png)](https://www.icloud.com/shortcuts/7d09464c2b8146b89fe8f0a7dd4240d8)
+![Shortcut Banner](https://i.imgur.com/yNuPpgU.png)
 
 ## Table of Contents
 

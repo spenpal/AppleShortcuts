@@ -1,4 +1,4 @@
-[![Shortcut Banner](https://i.imgur.com/PCTvQ2w.png)](https://www.icloud.com/shortcuts/787da9fed5ea4d87a664b0c31bd8b982)
+![Shortcut Banner](https://i.imgur.com/PCTvQ2w.png)
 
 <p align="center">
 	<a href="https://blog.routinehub.co/linkedin-profile-to-apple-contacts-shortcut/">
