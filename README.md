@@ -5,7 +5,7 @@
 
 Welcome to my Apple Shortcuts repo! Feel free to peruse — you might end up finding something useful!
 
-To learn more about each shortcut, read the **README** inside each folder. To download my shortcuts, visit [RoutineHub](https://routinehub.co/user/spenpal), which is my official Shortcuts page.
+Download my shortcuts at [RoutineHub](https://routinehub.co/user/spenpal) (_my official Shortcuts page_). You can also learn more about each shortcut by reading the **README** inside each folder. 
 
 Feel free to leave any feedback (_questions, bugs, features_) on my shortcuts! To do so, create a `New issue` in the [Issues](https://github.com/mrjeevs/Shortcuts/issues) tab.
 
