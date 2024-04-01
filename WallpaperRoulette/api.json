@@ -1,6 +1,6 @@
 {
-    "Version": "2.0.0",
-    "URL": "https://www.icloud.com/shortcuts/5fd8fcfe28f74f36a9d183427957dd54",
-    "Notes": "BREAKING CHANGES\n→ Added menu to choose between new wallpaper and saving current wallpaper.\n→ Automation Users: Your current automation won't work anymore. Instructions to set up an automation with this shortcut have changed. Please revisit the docs to set up a new automation for this shortcut.",
-    "Release": "03/31/24"
+    "Version": "2.1.0",
+    "URL": "https://www.icloud.com/shortcuts/719d2c954644499bb566b495229d092a",
+    "Notes": "→ Add settings on whether to view the menu on startup and enable/disable notifications.",
+    "Release": "04/01/24"
 }
