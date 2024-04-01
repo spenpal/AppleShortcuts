@@ -15,9 +15,9 @@
 
 **Wallpaper Roulette** fetches a random wallpaper from [Unsplash](https://unsplash.com/), sizing it to your device's resolution for both the lock and home screens.
 
-The current wallpaper is saved in your `Files` app at: "_**iCloud Drive/Shortcuts/WallpaperRoulette/**_". If you're particularly fond of the current wallpaper, save it to your `Photos` app by navigating to the folder. With each new run of the shortcut, the previous wallpaper is deleted from the `Files` app, making room for the new one.
-
 If you have specific wallpaper preferences, input keywords for a guided search. Keep in mind, it's a wallpaper **finder**, not a _generator_ - embracing the spirit of randomness!
+
+Also, if you're particularly fond of the current wallpaper, you can save it to your `Photos` app.
 
 ## Prerequisites
 
@@ -37,10 +37,17 @@ To update your wallpaper regularly:
 2.  Tap on the "**+**" at the top right.
 3.  Choose **Time of Day**.
 4.  Select your preferred time and frequency for the shortcut to run.
-    -   Ensure you choose _Run Immediately_ to skip confirmation prompts.
-5.  Tap **Next** and search for "**Wallpaper Roulette**" to select it.
+    -   Ensure you choose **Run Immediately** to skip confirmation prompts.
+5.  Tap **Next** and create a **New Blank Automation**.
+6.  Add a **Text** action with the following content: `New`.
+7.  Add a **Run Shortcut** action, selecting the **Wallpaper Roulette** shortcut, and providing the **Text** action as input.
+8.  Tap **Done**.
 
 The shortcut will now run at your specified times.
+
+### Widget
+
+Add the shortcut as a widget to your lock screen or home screen, so you can see your wallpaper update live! Check out how to do [that](https://support.apple.com/en-us/HT207122).
 
 ## Settings
 
@@ -56,14 +63,17 @@ Configure the following settings to your preferences.
     -   Add keywords to refine your wallpaper search.
     -   Default: _wallpaper_
     -   For best results, stick to **one additional keyword**.
+4.  **Album**
+    -   Choose a `Photos` album to save your current wallpaper in.
+    -   Default: **Recents**
 
 ### Change Settings
 
 Follow these steps to change the above settings at any time.
 
-1.  Long-press on the shortcut and select **Details**.
-2.  Navigate to the **Setup** tab and tap **Customize Shortcut**.
-3.  Follow the setup once again.
+1. Long-press on the shortcut and select **Details**.
+2. Navigate to the **Setup** tab and tap **Customize Shortcut**.
+3. Follow the setup once again.
 
 ## Feedback
 
@@ -90,3 +100,4 @@ This shortcut utilizes the [UpdateKit API](https://www.mikebeas.com/updatekit-ap
 ## Credits
 
 -   Graphics created with [MediaKit](https://routinehub.co/shortcut/1911).
+-   Menu icons provided by [Freepik on Flaticon](https://www.flaticon.com/free-icons/photo).
