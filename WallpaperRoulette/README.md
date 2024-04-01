@@ -53,19 +53,26 @@ Add the shortcut as a widget to your lock screen or home screen, so you can see 
 
 Configure the following settings to your preferences.
 
-1.  **Wallpaper**
-    -   Choose which wallpaper to update.
-    -   Default: **Wallpaper 1**
-2.  **Location**
-    -   Select where you want the new wallpapers applied.
-    -   Default: **Lock Screen** and **Home Screen**.
-3.  **Keywords**
-    -   Add keywords to refine your wallpaper search.
-    -   Default: _wallpaper_
-    -   For best results, stick to **one additional keyword**.
-4.  **Album**
-    -   Choose a `Photos` album to save your current wallpaper in.
-    -   Default: **Recents**
+1. **General**
+    1. **Show Menu**
+        - Display a menu of options when running the shortcut. When set to **False**, the default behavior is to set a new wallpaper automatically.
+        - Default: **True**
+    2. **Notifications**
+        - Display notifications when a new wallpaper is set or when the current wallpaper is being saved.
+        - Default: **True**
+2. **Wallpaper**
+    - Choose which wallpaper to update.
+    - Default: **Wallpaper 1**
+3. **Location**
+    - Select where you want the new wallpapers applied.
+    - Default: **Lock Screen** and **Home Screen**.
+4. **Keywords**
+    - Add keywords to refine your wallpaper search.
+    - Default: _wallpaper_
+    - For best results, stick to **one additional keyword**.
+5. **Album**
+    - Select a `Photos` album when you want to save your current wallpaper in it.
+    - Default: **Recents**
 
 ### Change Settings
 
