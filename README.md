@@ -1,7 +1,7 @@
 # Apple Shortcuts
 
-![Shortcuts Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fus-south1-apple-shortcuts-418503.cloudfunctions.net%2Froutinehub&query=%24.Shortcuts&label=Shortcuts&color=%233b95ed)
-![Downloads Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fus-south1-apple-shortcuts-418503.cloudfunctions.net%2Froutinehub&query=%24.Downloads&label=Downloads&color=%2324b363)
+![Shortcuts Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fus-south1-apple-shortcuts-418503.cloudfunctions.net%2Froutinehub&query=%24.Shortcuts&label=Shortcuts&color=%233b95ed&cacheSeconds=86400)
+![Downloads Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fus-south1-apple-shortcuts-418503.cloudfunctions.net%2Froutinehub&query=%24.Downloads&label=Downloads&color=%2324b363&cacheSeconds=86400)
 
 Welcome to my Apple Shortcuts repo! Feel free to peruse — you might end up finding something useful!
 
