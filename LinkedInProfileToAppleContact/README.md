@@ -82,3 +82,4 @@ This shortcut utilizes the [UpdateKit API](https://www.mikebeas.com/updatekit-ap
 -   Banner and badges created with [MediaKit](https://routinehub.co/shortcut/1911).
 -   Screenshots framed with [Screenshot Framer](https://routinehub.co/shortcut/8067/).
 -   [u/osnipassos](https://www.reddit.com/user/osnipassos/): For idea and initial contact conversion code.
+-   [@atnbueno](https://routinehub.co/user/atnbueno): [JS code](https://routinehub.co/shortcut/6758/) to check for internet connectivity.
