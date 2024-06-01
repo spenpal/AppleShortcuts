@@ -56,13 +56,27 @@ function get_company() {
         return [null, null];
     }
 
-    const experience_element = experience_div_element.parentElement;
-
     let latest_company_name = "";
     let latest_company_position = "";
 
-    const latest_company = experience_element.querySelector("li");
-    if (latest_company) {
+    const latest_company =
+        experience_div_element.parentElement.querySelector("li");
+    if (latest_company.querySelector("li")) {
+        // Latest company, multiple positions
+        const latest_company_name_element =
+            latest_company.querySelector("div > span");
+        const latest_company_position_element = latest_company
+            .querySelector("li")
+            .querySelector("div > span");
+
+        latest_company_name = latest_company_name_element
+            ? latest_company_name_element.textContent.trim()
+            : null;
+        latest_company_position = latest_company_position_element
+            ? latest_company_position_element.textContent.trim()
+            : null;
+    } else {
+        // Latest company, latest position
         const latest_company_name_element =
             latest_company.querySelector("div > span > span");
         const latest_company_position_element =
@@ -185,6 +199,10 @@ function waitForElementToExist(selector) {
     });
 }
 
+function sleep(delay) {
+    return new Promise((resolve) => setTimeout(resolve, delay));
+}
+
 async function main() {
     // JSON Object of LinkedIn Information
     const linkedin_info = {
@@ -217,9 +235,11 @@ async function main() {
     [linkedin_info.LAST_COMPANY_NAME, linkedin_info.LAST_COMPANY_POSITION] =
         get_company();
 
+    // Sleep for a bit to allow the contact info to load
+    await sleep(1000);
+
     // Click on the contact info button
     document.getElementById("top-card-text-details-contact-info").click();
-
     const contact_info_element = await waitForElementToExist(
         "#artdeco-modal-outlet section > div"
     );
