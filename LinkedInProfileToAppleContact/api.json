@@ -1,6 +1,6 @@
 {
-    "Version": "1.2.1",
-    "URL": "https://www.icloud.com/shortcuts/787da9fed5ea4d87a664b0c31bd8b982",
-    "Notes": "→ Optimized auto-updater for faster shortcut runs.\n→ Switched to RoutineHub API for updates.\n→ Updated metadata dictionary with new RoutineHub username.",
-    "Release": "02/20/24"
+    "Version": "2.0.0",
+    "URL": "https://www.icloud.com/shortcuts/3e557d9187be4d07ab6e0397b6d529ab",
+    "Notes": "→ Fixed an issue causing the shortcut to fail on the initial run.\n→ Corrected an edge case to scrape the latest company position.\n→ Implemented JavaScript to check for an Internet connection more reliably.",
+    "Release": "06/01/24"
 }
