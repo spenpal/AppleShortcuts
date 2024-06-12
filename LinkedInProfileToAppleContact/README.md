@@ -35,7 +35,7 @@
 ### How To Use
 
 1. Open `Safari`.
-2. Log in to [Linkedin](https://www.linkedin.com/).
+2. Log in to [LinkedIn](https://www.linkedin.com/).
 3. Tap on **&#x1D00;A > Request Desktop Site**.
     - 💡Tip: To auto-request desktop site every time you visit LinkedIn, tap **&#x1D00;A > Website Settings > Request Desktop Website**.
 4. Visit your connection's LinkedIn profile.
