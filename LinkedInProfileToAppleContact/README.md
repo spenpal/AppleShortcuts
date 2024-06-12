@@ -44,6 +44,10 @@
     - Tap the _Share Sheet_ icon and then `Contacts`.
 7. Tap **Done**, then **Save**.
 
+### Notes
+
+-   This shortcut does not work on macOS devices, even with JavaScript enabled in Safari. This is an Apple bug, and there is not much I can do about it until it's fixed.
+
 ## Demo
 
 <p align="center">
