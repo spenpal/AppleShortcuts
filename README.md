@@ -1,7 +1,6 @@
 # Apple Shortcuts
 
-![Shortcuts Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fstorage.googleapis.com%2Froutinehub%2Fstats.json&query=%24.Shortcuts&label=Shortcuts&color=3b95ed&cacheSeconds=86400)
-![Downloads Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fstorage.googleapis.com%2Froutinehub%2Fstats.json&query=%24.Downloads&label=Downloads&color=24b363&cacheSeconds=86400)
+![RoutineHub Profile Page](https://storage.googleapis.com/routinehub/screenshot.jpg)
 
 Welcome to my Apple Shortcuts repo! Feel free to peruse — you might end up finding something useful!
 
