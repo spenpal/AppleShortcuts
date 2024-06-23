@@ -1,6 +1,6 @@
 # Apple Shortcuts
 
-![RoutineHub Profile Page](https://storage.googleapis.com/routinehub/screenshot.jpg)
+[![RoutineHub Profile Page](https://storage.googleapis.com/routinehub/screenshot.jpg)](https://routinehub.co/user/spenpal)
 
 Welcome to my Apple Shortcuts repo! Feel free to peruse — you might end up finding something useful!
 
