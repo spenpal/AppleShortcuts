@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Spotify Shuffle Callback</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"
+        ></script>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                background-color: #121212;
+                margin: 5%;
+                font-family: Arial, sans-serif;
+            }
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: auto;
+                padding: 5%;
+                background-color: #1e1e1e;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                border-radius: 15px;
+            }
+
+            img {
+                width: 75%;
+                height: auto;
+            }
+
+            h2 {
+                font-size: 5cqw;
+            }
+
+            textarea {
+                border: 1px solid #303030;
+                border-radius: 15px;
+                font-size: 4cqw;
+                background-color: #303030;
+                color: #fff;
+                padding: 3%;
+                width: 100%;
+                resize: none;
+                overflow: auto;
+            }
+
+            #copyButtonContainer {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 5%;
+            }
+
+            #copyButton {
+                background-color: #1db954;
+                color: #fff;
+                border: none;
+                padding: 5%;
+                border-radius: 1cqw;
+                cursor: pointer;
+                font-size: 3cqw;
+                white-space: nowrap;
+            }
+
+            #checkmark {
+                margin-left: 5%;
+                margin-bottom: 2.4%;
+                font-size: 7.2cqw;
+                display: none;
+            }
+
+            #code h2 {
+                color: #1db954;
+            }
+
+            #error h2 {
+                color: #b91d1d;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="code" class="container">
+            <img src="https://i.imgur.com/MjmbQPE.png" alt="Spotify Logo" />
+            <h2>Authorization Code</h2>
+            <div id="copyButtonContainer">
+                <button onclick="copyCodeToClipboard()" id="copyButton">
+                    <strong>Copy to Clipboard</strong>
+                </button>
+                <span id="checkmark">✅</span>
+            </div>
+            <textarea readonly></textarea>
+        </div>
+        <div id="error" class="container">
+            <img src="https://i.imgur.com/MjmbQPE.png" alt="Spotify Logo" />
+            <h2>ERROR</h2>
+            <textarea readonly></textarea>
+        </div>
+
+        <script>
+            function copyCodeToClipboard() {
+                // Function to copy code to clipboard and show checkmark
+                navigator.clipboard
+                    .writeText($("textarea").val())
+                    .then(showCheckmark);
+            }
+
+            function showCheckmark() {
+                // Function to show checkmark
+                const checkmark = $("#checkmark")[0];
+                checkmark.style.display = "inline";
+                setTimeout(function () {
+                    checkmark.style.display = "none";
+                }, 2000); // Hide checkmark after 2 seconds
+            }
+
+            $(document).ready(() => {
+                // Use URLSearchParams to get query parameters
+                const urlParams = new URLSearchParams(window.location.search);
+                const authCode = urlParams.get("code");
+                const errorValue = urlParams.get("error");
+                const codeContainer = $("#code");
+                const errorContainer = $("#error");
+                let textArea = null;
+
+                if (errorValue) {
+                    // If the URL has an error parameter, display the error
+                    codeContainer.hide(); // Hide the code container
+                    textArea = errorContainer.find("textarea");
+                    textArea.val(errorValue);
+                    navigator.clipboard.writeText("ERROR");
+                    errorContainer.show();
+                } else if (authCode) {
+                    // If the URL has a code parameter, display the code
+                    errorContainer.hide(); // Hide the error container
+                    textArea = codeContainer.find("textarea");
+                    textArea.val(authCode);
+                    codeContainer.show();
+                } else {
+                    // If the URL has no error or code parameter, display an error
+                    codeContainer.hide(); // Hide the code container
+                    textArea = errorContainer.find("textarea");
+                    textArea.val("No error or code parameter found in URL.");
+                    errorContainer.show();
+                }
+
+                textArea.height(textArea[0].scrollHeight); // Resize the textArea to fit the message
+
+                // Resize the codeField when the window is resized
+                $(window).on("resize", function () {
+                    textArea.height("auto");
+                    textArea.height(textArea[0].scrollHeight);
+                });
+            });
+        </script>
+    </body>
+</html>
