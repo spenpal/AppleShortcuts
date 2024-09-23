@@ -1,6 +1,6 @@
 {
     "Version": "3.0.0",
     "URL": "https://www.icloud.com/shortcuts/088bec1c02334cac9206c5c529c69f0b",
-    "Notes": "",
+    "Notes": "→ Replaced the deprecated \"Get Unsplash Image\" action from the Actions app with the Unsplash API to retrieve wallpaper images.\n→ Updated the auto-updater code to ensure more reliable Internet connectivity checks.",
     "Release": "09/23/24"
 }
