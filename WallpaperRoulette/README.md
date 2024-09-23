@@ -23,8 +23,6 @@ Also, if you're particularly fond of the current wallpaper, you can save it to y
 
 <a href="https://apps.apple.com/us/app/files/id1232058109">
 	<img src="https://i.imgur.com/gyNTIdc.png" alt="files-badge" width="14.21%"></a>
-<a href="https://apps.apple.com/us/app/actions/id1586435171">
-	<img src="https://i.imgur.com/Uf9cvrl.png" alt="actions--badge" width="17.33%"/></a>
 <a href="https://apps.apple.com/us/app/photos/id1584215428">
 	<img src="https://i.imgur.com/WlLrStW.png" alt="photos-badge" width="16.62%"/></a>
 
