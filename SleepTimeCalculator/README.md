@@ -11,15 +11,17 @@
 
 ## How It Works
 
-**Sleep Time Calculator** simplifies bedtime and wake-up time decisions with three functions:
+**Sleep Time Calculator** simplifies bedtime and wake-up time decisions with four functions:
 
--   **I want to wake up at...**
+-   **Wake up at...**
     -   Enter your desired wake-up time, and the calculator suggests 4 bedtimes, each with varying sleep durations (from 4.5 to 9 hours).
         -   Optionally, set an alarm for your wake-up time.
--   **I want to fall asleep by...**
+-   **Fall asleep by...**
     -   Enter your desired bedtime, and the calculator suggests 4 wake-up times, each with varying sleep durations (from 4.5 to 9 hours).
     -   Optionally, set an alarm for one of the suggested wake-up times.
--   **I want to sleep now!**
+-   **Nap for...**
+    -   Enter your desired nap time, and the calculator will set a nap timer.
+-   **Sleep now!**
     -   For an immediate bedtime, the calculator suggests 6 wake-up times, each with varying sleep durations (from 1.5 to 9 hours).
     -   Optionally, set an alarm for one of the suggested wake-up times.
 
@@ -66,3 +68,4 @@ This shortcut utilizes the [UpdateKit API](https://www.mikebeas.com/updatekit-ap
 -   Banner created with [MediaKit](https://routinehub.co/shortcut/1911).
 -   Screenshots framed with [Screenshot Framer](https://routinehub.co/shortcut/8067/).
 -   Idea inspired by [Sleepopolis](https://sleepopolis.com/calculators/sleep/).
+-   [@atnbueno](https://routinehub.co/user/atnbueno): [JS code](https://routinehub.co/shortcut/6758/) to check for internet connectivity.
