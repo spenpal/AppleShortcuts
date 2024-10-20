@@ -40,7 +40,7 @@ For more in-depth sleep information, visit [Sleepopolis](https://sleepopolis.com
 
 ## Demo
 
-![Demo Collage](https://i.imgur.com/4sGDZOq.png)
+![Demo Collage](https://i.imgur.com/VcnBqZE.png)
 
 ## Prerequisites
 
