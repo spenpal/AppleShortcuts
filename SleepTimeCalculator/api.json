@@ -1,6 +1,6 @@
 {
-    "Version": "1.1.0",
-    "URL": "https://www.icloud.com/shortcuts/2283503e5f134cc98d8b69082fd25431",
-    "Notes": "→ Added support for setting alarms.\n→ Fixed formatting issues in messages.\n→ Optimized auto-updater for faster shortcut runs.\n→ Switched to RoutineHub API for updates.\n→ Updated metadata dictionary with new RoutineHub username.",
-    "Release": "02/20/24"
+    "Version": "1.2.0",
+    "URL": "https://www.icloud.com/shortcuts/624edbc3ca374773bfb31976a74a8bdf",
+    "Notes": "→ Added nap timer feature.\n→ Updated menu wording.\n→ Updated the auto-updater code to ensure more reliable Internet connectivity checks.",
+    "Release": "10/19/24"
 }
