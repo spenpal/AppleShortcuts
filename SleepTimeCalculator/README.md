@@ -4,6 +4,7 @@
 
 -   [How It Works](#how-it-works)
 -   [Demo](#demo)
+-   [Prerequisites](#prerequisites)
 -   [Feedback](#feedback)
 -   [Auto-Updater](#auto-updater)
 -   [Privacy](#privacy)
@@ -39,7 +40,12 @@ For more in-depth sleep information, visit [Sleepopolis](https://sleepopolis.com
 
 ## Demo
 
-![Demo Collage](https://i.imgur.com/TdTPAbE.png)
+![Demo Collage](https://i.imgur.com/4sGDZOq.png)
+
+## Prerequisites
+
+<a href="https://apps.apple.com/us/app/clock/id1584215688">
+	<img src="https://i.imgur.com/SCZPuGU.png" alt="clock-badge" width="14.95%"></a>
 
 ## Feedback
 
