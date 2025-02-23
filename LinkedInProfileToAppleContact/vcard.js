@@ -11,10 +11,8 @@ function createVCard(data) {
         FN: `FN:${data.FIRST_NAME} ${
             data.MIDDLE_NAME ? data.MIDDLE_NAME : ""
         } ${data.LAST_NAME}`,
-        ORG: data.LAST_COMPANY_NAME ? `ORG:${data.LAST_COMPANY_NAME}` : "",
-        TITLE: data.LAST_COMPANY_POSITION
-            ? `TITLE:${data.LAST_COMPANY_POSITION}`
-            : "",
+        ORG: data.COMPANY_NAME ? `ORG:${data.COMPANY_NAME}` : "",
+        TITLE: data.COMPANY_POSITION ? `TITLE:${data.COMPANY_POSITION}` : "",
         TEL: data.PHONE
             ? `TEL;type=${
                   data.PHONE.TYPE === "MOBILE" ? "CELL" : data.PHONE.TYPE

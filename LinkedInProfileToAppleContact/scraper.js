@@ -1,120 +1,99 @@
-function get_linkedin_url() {
+function getLinkedinUrl() {
     let url = decodeURIComponent(window.location.href); // For names with non-English characters
     url = url.match(/https:\/\/www.linkedin.com\/in\/([^/]+)/)[0]; // Remove query parameters
     return url;
 }
 
-function get_name() {
-    const full_name_element = document.querySelector(".text-heading-xlarge");
-    const full_name = full_name_element
-        ? full_name_element.textContent.trim().split(" ")
-        : [""];
-    const first_name = full_name[0];
-    const last_name = full_name[full_name.length - 1];
-    const middle_name =
-        full_name.length > 2 ? full_name.slice(1, -1).join(" ") : null;
-    return [first_name, middle_name, last_name];
+function getName() {
+    const nameHeading = document.querySelector("h1");
+    if (!nameHeading) return ["", null, ""];
+
+    const nameParts = nameHeading.textContent.trim().split(" ");
+    const firstName = nameParts[0];
+    const lastName = nameParts[nameParts.length - 1];
+    const middleName =
+        nameParts.length > 2 ? nameParts.slice(1, -1).join(" ") : null;
+    return [firstName, middleName, lastName];
 }
 
-async function get_profile_picture_url() {
-    const profile_picture_element = document.querySelector(
-        "main > section button > img"
-    );
+async function getProfilePictureUrl() {
+    // TODO: change this query selector
+    const imgElement = document.querySelector("main > section button > img");
 
     // Check if the profile picture is the default image
     if (
-        profile_picture_element &&
-        profile_picture_element
-            .getAttribute("src")
-            .trim()
-            .startsWith("data:image")
+        imgElement &&
+        imgElement.getAttribute("src").trim().startsWith("data:image")
     ) {
         return null;
     }
 
-    const profile_picture_button = profile_picture_element.parentElement;
-    profile_picture_button.click();
-    const bigger_profile_picture_element = await waitForElementToExist(
-        "#artdeco-modal-outlet img"
-    );
+    const imgButton = imgElement.parentElement;
+    imgButton.click();
+    const modalImg = await waitForElementToExist("#artdeco-modal-outlet img");
 
-    const profile_picture_url = bigger_profile_picture_element
-        ? bigger_profile_picture_element.getAttribute("src").trim()
-        : null;
+    const pictureUrl = modalImg ? modalImg.getAttribute("src").trim() : null;
 
     document.querySelector("[data-test-modal-close-btn]").click();
 
-    return profile_picture_url;
+    return pictureUrl;
 }
 
-function get_company() {
-    const experience_div_element = document.querySelector(
-        "main > section > div#experience"
-    );
+function getCompany() {
+    const experienceSection = document.querySelector("#experience");
+    if (!experienceSection) return [null, null];
 
-    if (!experience_div_element) {
-        return [null, null];
-    }
+    let companyName = null;
+    let position = null;
 
-    let latest_company_name = "";
-    let latest_company_position = "";
-
-    const latest_company =
-        experience_div_element.parentElement.querySelector("li");
-    if (latest_company.querySelector("li")) {
+    const companyItem = experienceSection.parentElement.querySelector("li");
+    if (
+        companyItem.querySelector("[data-field='experience_company_logo'] span")
+    ) {
         // Latest company, multiple positions
-        const latest_company_name_element =
-            latest_company.querySelector("div > span");
-        const latest_company_position_element = latest_company
+        const nameSpan = companyItem.querySelector("div > span");
+        const positionSpan = companyItem
             .querySelector("li")
             .querySelector("div > span");
 
-        latest_company_name = latest_company_name_element
-            ? latest_company_name_element.textContent.trim()
-            : null;
-        latest_company_position = latest_company_position_element
-            ? latest_company_position_element.textContent.trim()
-            : null;
+        companyName = nameSpan ? nameSpan.textContent.trim() : null;
+        position = positionSpan ? positionSpan.textContent.trim() : null;
     } else {
         // Latest company, latest position
-        const latest_company_name_element =
-            latest_company.querySelector("div > span > span");
-        const latest_company_position_element =
-            latest_company.querySelector("div > span");
+        const nameSpan = companyItem.querySelector("div > span > span");
+        const positionSpan = companyItem.querySelector("div > span");
 
-        latest_company_name = latest_company_name_element
-            ? latest_company_name_element.textContent.trim().split(" · ")[0]
+        companyName = nameSpan
+            ? nameSpan.textContent.trim().split(" · ")[0]
             : null;
-        latest_company_position = latest_company_position_element
-            ? latest_company_position_element.textContent.trim()
-            : null;
+        position = positionSpan ? positionSpan.textContent.trim() : null;
     }
 
-    return [latest_company_name, latest_company_position];
+    return [companyName, position];
 }
 
-function get_website_urls(element) {
-    const websites_list_element = element.querySelector("ul");
+function getWebsiteUrls(element) {
+    const listElement = element.querySelector("ul");
 
-    if (websites_list_element) {
+    if (listElement) {
         const websites = [];
 
-        const url_elements = websites_list_element.querySelectorAll("a");
-        const label_elements = websites_list_element.querySelectorAll("span");
+        const links = listElement.querySelectorAll("a");
+        const labels = listElement.querySelectorAll("span");
 
-        for (let i = 0; i < url_elements.length; i++) {
-            const url_element = url_elements[i];
-            const label_element = label_elements[i];
+        for (let i = 0; i < links.length; i++) {
+            const link = links[i];
+            const label = labels[i];
 
-            const website_url = url_element.getAttribute("href").trim();
-            const website_label = label_element.textContent
+            const url = link.getAttribute("href").trim();
+            const labelText = label.textContent
                 .replace(/\(([^)]+)\)/, "$1")
                 .trim()
                 .toLowerCase();
 
             websites.push({
-                URL: website_url,
-                LABEL: website_label,
+                URL: url,
+                LABEL: labelText,
             });
         }
 
@@ -124,15 +103,15 @@ function get_website_urls(element) {
     return null;
 }
 
-function get_phone_number(element) {
-    const phone_number_element = element.querySelectorAll("ul > li > span");
+function getPhoneNumber(element) {
+    const phoneNumberElement = element.querySelectorAll("ul > li > span");
 
-    if (phone_number_element) {
-        const number = phone_number_element
-            ? phone_number_element[0].textContent.trim()
+    if (phoneNumberElement) {
+        const number = phoneNumberElement
+            ? phoneNumberElement[0].textContent.trim()
             : "";
-        const type = phone_number_element
-            ? phone_number_element[1].textContent
+        const type = phoneNumberElement
+            ? phoneNumberElement[1].textContent
                   .replace(/\(([^)]+)\)/, "$1")
                   .trim()
                   .toUpperCase()
@@ -143,40 +122,40 @@ function get_phone_number(element) {
     return null;
 }
 
-function get_address(element) {
-    const address_element = element.querySelector("div > a");
-    const address = address_element ? address_element.textContent.trim() : null;
+function getAddress(element) {
+    const addressElement = element.querySelector("div > a");
+    const address = addressElement ? addressElement.textContent.trim() : null;
     return address;
 }
 
-function get_email(element) {
-    const email_element = element.querySelector("div > a");
-    const email = email_element ? email_element.textContent.trim() : null;
+function getEmail(element) {
+    const emailElement = element.querySelector("div > a");
+    const email = emailElement ? emailElement.textContent.trim() : null;
     return email;
 }
 
-function get_twitter_url(element) {
-    const twitter_element = element.querySelector("ul > li > a");
-    const twitter_url = twitter_element
-        ? twitter_element.getAttribute("href").trim()
+function getTwitterUrl(element) {
+    const twitterElement = element.querySelector("ul > li > a");
+    const twitterUrl = twitterElement
+        ? twitterElement.getAttribute("href").trim()
         : null;
-    return twitter_url;
+    return twitterUrl;
 }
 
-function get_birthday(element) {
-    const birthday_element = element.querySelector("div > span");
-    const birthday = birthday_element
-        ? birthday_element.textContent.trim()
+function getBirthday(element) {
+    const birthdayElement = element.querySelector("div > span");
+    const birthday = birthdayElement
+        ? birthdayElement.textContent.trim()
         : null;
     return birthday;
 }
 
-function get_connection_date(element) {
-    const connected_date_element = element.querySelector("div > span");
-    const connected_date = connected_date_element
-        ? connected_date_element.textContent.trim()
+function getConnectionDate(element) {
+    const connectedDateElement = element.querySelector("div > span");
+    const connectedDate = connectedDateElement
+        ? connectedDateElement.textContent.trim()
         : null;
-    return connected_date;
+    return connectedDate;
 }
 
 function waitForElementToExist(selector) {
@@ -205,83 +184,76 @@ function sleep(delay) {
 
 async function main() {
     // JSON Object of LinkedIn Information
-    const linkedin_info = {
+    const profile = {
         PROFILE_PICTURE_URL: null,
         LAST_NAME: null,
         MIDDLE_NAME: null,
         FIRST_NAME: null,
-        LAST_COMPANY_NAME: null,
-        LAST_COMPANY_POSITION: null,
+        COMPANY_NAME: null,
+        COMPANY_POSITION: null,
         PHONE: null,
         EMAIL: null,
         WEBSITES: null,
         ADDRESS: null,
         BIRTHDAY: null,
-        LINKEDIN_URL: null,
+        LINKEDIN_URL: getLinkedinUrl(),
         TWITTER_URL: null,
         CONNECTION_DATE: null,
     };
 
-    linkedin_info.LINKEDIN_URL = get_linkedin_url();
+    [profile.FIRST_NAME, profile.MIDDLE_NAME, profile.LAST_NAME] = getName();
 
-    [
-        linkedin_info.FIRST_NAME,
-        linkedin_info.MIDDLE_NAME,
-        linkedin_info.LAST_NAME,
-    ] = get_name();
+    profile.PROFILE_PICTURE_URL = await getProfilePictureUrl();
 
-    linkedin_info.PROFILE_PICTURE_URL = await get_profile_picture_url();
-
-    [linkedin_info.LAST_COMPANY_NAME, linkedin_info.LAST_COMPANY_POSITION] =
-        get_company();
+    [profile.COMPANY_NAME, profile.COMPANY_POSITION] = getCompany();
 
     // Sleep for a bit to allow the contact info to load
     await sleep(1000);
 
     // Click on the contact info button
     document.getElementById("top-card-text-details-contact-info").click();
-    const contact_info_element = await waitForElementToExist(
+    const contactInfo = await waitForElementToExist(
         "#artdeco-modal-outlet section > div"
     );
 
     // Loop through contact info
-    Array.from(contact_info_element.children).forEach((element) => {
-        const contact_icon_element = element.querySelector("svg");
-        const contact_icon_name = contact_icon_element
-            ? contact_icon_element.getAttribute("data-test-icon").trim()
+    Array.from(contactInfo.children).forEach((element) => {
+        const iconElement = element.querySelector("svg");
+        const iconName = iconElement
+            ? iconElement.getAttribute("data-test-icon").trim()
             : "";
 
-        switch (contact_icon_name) {
+        switch (iconName) {
             case "link-medium":
-                linkedin_info.WEBSITES = get_website_urls(element);
+                profile.WEBSITES = getWebsiteUrls(element);
                 break;
             case "phone-handset-medium":
-                linkedin_info.PHONE = get_phone_number(element);
+                profile.PHONE = getPhoneNumber(element);
                 break;
             case "location-marker-medium":
-                linkedin_info.ADDRESS = get_address(element);
+                profile.ADDRESS = getAddress(element);
                 break;
             case "envelope-medium":
-                linkedin_info.EMAIL = get_email(element);
+                profile.EMAIL = getEmail(element);
                 break;
             case "twitter-solid":
-                linkedin_info.TWITTER_URL = get_twitter_url(element);
+                profile.TWITTER_URL = getTwitterUrl(element);
                 break;
             case "calendar-medium":
-                linkedin_info.BIRTHDAY = get_birthday(element);
+                profile.BIRTHDAY = getBirthday(element);
                 break;
             case "people-medium":
-                linkedin_info.CONNECTION_DATE = get_connection_date(element);
+                profile.CONNECTION_DATE = getConnectionDate(element);
                 break;
         }
     });
 
-    return linkedin_info;
+    return profile;
 }
 
-main().then((linkedin_info) => {
+main().then((profile) => {
     // Close contact window
     document.querySelector("[data-test-modal-close-btn]").click();
-    console.log(linkedin_info);
-    // completion(linkedin_info);
+    console.log(profile);
+    // completion(profile);
 });
